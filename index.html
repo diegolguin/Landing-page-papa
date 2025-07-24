@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Sandoval | Fibra de Vidrio</title>
+  <style>
+    :root{
+      --azul:#0C6FB7;
+      --gris:#3C3C3B;
+      --blanco:#fff;
+      --negro:#111;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
+    body{background:var(--blanco);color:var(--gris);line-height:1.45;}
+    img{max-width:100%;height:auto;display:block;}
+    a{text-decoration:none;color:inherit;}
+    /* Layout */
+    .container{width:min(1050px,90%);margin:auto;}
+    header.hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;color:var(--blanco);text-align:center;background:var(--azul) url('img/piscina_after.jpg') center/cover fixed;}
+    header.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);}    
+    .hero-content{position:relative;z-index:2;padding:2rem 1rem;}
+    h1{font-size:clamp(2rem,5vw,3.7rem);font-weight:700;letter-spacing:.5px;}
+    h2{font-size:2rem;margin-bottom:.6rem;color:var(--azul);}    
+    p.lead{font-size:1.15rem;margin:1rem auto 1.5rem;max-width:720px;color:var(--blanco);}    
+    .btn{display:inline-block;background:#25D366;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:1.05rem;box-shadow:0 3px 8px rgba(0,0,0,.25);transition:.2s;}
+    .btn:hover{transform:scale(1.03);}    
+    section{padding:3.2rem 0;}
+    .grid{display:grid;gap:1.6rem;}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+    .card{background:var(--blanco);border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);}    
+    .card h3{margin:1rem 1.2rem .4rem;color:var(--azul);}    
+    .card p{margin:0 1.2rem 1.2rem;font-size:.95rem;color:var(--gris);}    
+    .before-after{position:relative;}
+    .before-after img{width:100%;}
+    .label{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;padding:6px 12px;border-radius:6px;font-size:.85rem;font-weight:600;}
+    footer{background:var(--gris);color:#ddd;padding:2rem 0;font-size:.9rem;}
+    footer a{color:#ddd;}
+    /* Responsive hero button */
+    .floating-cta{position:fixed;right:16px;bottom:16px;z-index:50;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.28);}
+    .floating-cta span{font-size:1.2rem;margin-left:6px;}
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Pedro Sandoval<br/>Fibra de Vidrio</h1>
+      <p class="lead">Fabricación de estanques • Revestimiento de piscinas • Tinajas y reparaciones<br/>Trabajo profesional, materiales resistentes y garantía real.</p>
+      <a class="btn" href="https://wa.me/569XXXXXXXX" target="_blank">Cotiza por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        <div class="card">
+          <img src="img/estanque.jpg" alt="Estanque fibra de vidrio" />
+          <h3>Estanques a Medida</h3>
+          <p>Para agua potable, riego o procesos industriales. Alta resistencia a químicos y rayos UV.</p>
+        </div>
+        <div class="card">
+          <img src="img/piscina_after.jpg" alt="Piscina revestida" />
+          <h3>Revestimiento de Piscinas</h3>
+          <p>Impermeabilización total, reparación de filtraciones y terminaciones lisas y fáciles de limpiar.</p>
+        </div>
+        <div class="card">
+          <img src="img/tinaja.jpg" alt="Tinaja fibra de vidrio" />
+          <h3>Tinajas y Hot Tubs</h3>
+          <p>Fabricación y revestimiento para un uso higiénico y duradero, con acabado profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES / DESPUÉS -->
+  <section id="antes-despues" style="background:#f7f7f7;">
+    <div class="container">
+      <h2>Antes / Después</h2>
+      <p style="margin: .6rem 0 2rem; max-width:700px;">Mira cómo transformamos esta piscina con nuestro revestimiento en fibra de vidrio.</p>
+      <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+        <div class="before-after">
+          <img src="img/piscina_before.jpg" alt="Antes piscina" />
+          <span class="label">ANTES</span>
+        </div>
+        <div class="before-after">
+          <img src="img/piscina_after.jpg" alt="Después piscina" />
+          <span class="label">DESPUÉS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto">
+    <div class="container" style="text-align:center;">
+      <h2>¿Quieres tu cotización?</h2>
+      <p style="margin:1rem auto 2rem;max-width:650px;">Envíanos fotos o medidas y te respondemos rápido. Trabajamos en <strong>Santiago y alrededores</strong> (ajusta tu zona).
+      </p>
+      <a class="btn" href="https://wa.me/569XXXXXXXX" target="_blank">Hablar por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;">
+      <div>
+        © <span id="year"></span> Pedro Sandoval Fibra de Vidrio<br/>
+        Tel: +56 9 XXXXX XXX · Correo: contacto@tudominio.cl
+      </div>
+      <div>
+        <a href="#servicios">Servicios</a> · <a href="#antes-despues">Antes/Después</a> · <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="https://wa.me/569XXXXXXXX" target="_blank">WhatsApp <span>→</span></a>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
