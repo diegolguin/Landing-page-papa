@@ -11,6 +11,22 @@
       --blanco:#fff;
       --negro:#111;
     }
+    /* Hover título hero con brillo metálico fuerte */
+.hero-content h1 {
+  color: #fff; /* color por defecto */
+  transition: color .3s, text-shadow .3s, border-bottom .3s;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+.hero-content h1:hover {
+  color: #CED2D2; /* plateado claro */
+  text-shadow:
+    0 0 8px rgba(206,210,210,0.8),   /* resplandor forte */
+    0 0 16px rgba(206,210,210,0.6);
+  border-bottom: 2px solid #E6E8E8; /* borde plateado más claro */
+}
+
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
     body{background:var(--blanco);color:var(--gris);line-height:1.45;}
     img{max-width:100%;height:auto;display:block;}
@@ -51,6 +67,7 @@
     footer a{color:#ddd;}
     .floating-whatsapp{position:fixed;right:16px;bottom:16px;background:#25D366;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:1000;}
     .floating-whatsapp img{width:24px;height:24px;}
+  
   </style>
 </head>
 <body>
@@ -108,7 +125,7 @@
   <section id="contacto">
     <div class="container" style="text-align:center;">
       <h2>¿Quieres tu cotización?</h2>
-      <p style="margin:1rem auto 2rem;max-width:600px;">Envíanos fotos o medidas y respondemos rápido. Servicio disponible en <strong>Santiago y alrededores</strong>.</p>
+      <p style="margin:1rem auto 2rem;max-width:600px;">Envíanos fotos o medidas y respondemos rápido. Servicio disponible en <strong>Santiago y alrededores</strong>.  </p>
       <a class="btn" href="https://wa.me/569XXXXXXXX" target="_blank">Hablar por WhatsApp</a>
     </div>
   </section>
