@@ -161,4 +161,28 @@
     width:24px;
     height:24px;
   }
+  @media (max-width: 600px) {
+    .hero-content h1 {
+      color: #CED2D2 !important;
+      text-shadow:
+        0 0 8px rgba(206,210,210,0.8),
+        0 0 16px rgba(206,210,210,0.6);
+      border-bottom: 2px solid #E6E8E8;
+    }
+  }
+  /* Estilo específico para el botón “Ver más Antes/Después” */
+.ver-mas-btn {
+    background: var(--azul);        /* color diferente */
+    color: #fff;
+    border: 2px solid var(--negro);
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 700;
+    box-shadow: none;              /* sin sombra para que no parezca CTA flotante */
+    transition: background .2s, color .2s;
+  }
+  .ver-mas-btn:hover {
+    background: #094a75;            /* azul más oscuro al pasar */
+    color: #f0f0f0;
+  }
   

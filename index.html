@@ -44,7 +44,8 @@
   <section id="antes-despues" style="background:#f9f9f9;">
     <div class="container">
       <h2>Antes / Después</h2>
-      <div class="grid" style="margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;">
+      <div class="grid antes-grid" style="margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;">
+        <!-- Las dos primeras siempre visibles -->
         <div class="before-after">
           <img src="img/piscina_before.jpg" alt="Antes piscina" />
           <span class="label">ANTES</span>
@@ -54,8 +55,27 @@
           <span class="label">DESPUÉS</span>
         </div>
       </div>
+  
+      <!-- Contenedor oculto con más pares -->
+      <div class="grid antes-extra" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem; display: none;">
+        <div class="before-after">
+          <img src="img/piscina_before2.jpg" alt="Antes piscina 2" />
+          <span class="label">ANTES</span>
+        </div>
+        <div class="before-after">
+          <img src="img/piscina_after2.jpg" alt="Después piscina 2" />
+          <span class="label">DESPUÉS</span>
+        </div>
+        <!-- Puedes añadir más pares aquí del mismo modo -->
+      </div>
+  
+      <!-- Botón para revelar -->
+      <div style="text-align:center; margin-top:1.5rem;">
+        <button id="ver-mas-antes" class="btn ver-mas-btn">Ver más Antes/Después</button>
+      </div>
     </div>
   </section>
+  
 
   <!-- Contacto -->
   <section id="contacto">
@@ -80,5 +100,21 @@
   </a>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    const btnVerMas = document.getElementById('ver-mas-antes');
+    const extra = document.querySelector('.antes-extra');
+  
+    btnVerMas.addEventListener('click', () => {
+      // Muestra/oculta el contenedor
+      if (extra.style.display === 'none' || extra.style.display === '') {
+        extra.style.display = 'grid';
+        btnVerMas.textContent = 'Ver menos';
+      } else {
+        extra.style.display = 'none';
+        btnVerMas.textContent = 'Ver más Antes/Después';
+      }
+    });
+  </script>
+  
 </body>
 </html>
