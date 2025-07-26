@@ -15,34 +15,46 @@
     body{background:var(--blanco);color:var(--gris);line-height:1.45;}
     img{max-width:100%;height:auto;display:block;}
     a{text-decoration:none;color:inherit;}
-    /* Layout */
     .container{width:min(1050px,90%);margin:auto;}
-    header.hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;color:var(--blanco);text-align:center;background:var(--azul) url('img/piscina_after.jpg') center/cover fixed;}
-    header.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);}    
-    .hero-content{position:relative;z-index:2;padding:2rem 1rem;}
+    /* Hero con nuevo fondo */
+    header.hero {
+      position:relative;
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--blanco);
+      text-align:center;
+      background: var(--azul) url('img/revestimiento-fondo.jpg') center/cover;
+    }
+    header.hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+    .hero-content{position:relative;z-index:1;padding:2rem 1rem;}
     h1{font-size:clamp(2rem,5vw,3.7rem);font-weight:700;letter-spacing:.5px;}
-    h2{font-size:2rem;margin-bottom:.6rem;color:var(--azul);}    
-    p.lead{font-size:1.15rem;margin:1rem auto 1.5rem;max-width:720px;color:var(--blanco);}    
+    p.lead{font-size:1.15rem;margin:1rem auto 1.5rem;max-width:720px;color:var(--blanco);}
     .btn{display:inline-block;background:#25D366;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:1.05rem;box-shadow:0 3px 8px rgba(0,0,0,.25);transition:.2s;}
-    .btn:hover{transform:scale(1.03);}    
-    section{padding:3.2rem 0;}
+    .btn:hover{transform:scale(1.03);}
+    section{padding:3rem 0;}
     .grid{display:grid;gap:1.6rem;}
     .grid-3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
-    .card{background:var(--blanco);border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);}    
-    .card h3{margin:1rem 1.2rem .4rem;color:var(--azul);}    
-    .card p{margin:0 1.2rem 1.2rem;font-size:.95rem;color:var(--gris);}    
+    .card{background:var(--blanco);border:1px solid #e6e6e6;border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .card h3{margin:1rem;font-size:1.2rem;color:var(--azul);}
+    .card p{margin:0 1rem 1rem;font-size:.95rem;color:var(--gris);}
     .before-after{position:relative;}
-    .before-after img{width:100%;}
-    .label{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;padding:6px 12px;border-radius:6px;font-size:.85rem;font-weight:600;}
+    .before-after img{width:100%;border-radius:8px;}
+    .label{position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.6);color:#fff;padding:4px 8px;border-radius:4px;font-size:.8rem;}
     footer{background:var(--gris);color:#ddd;padding:2rem 0;font-size:.9rem;}
     footer a{color:#ddd;}
-    /* Responsive hero button */
-    .floating-cta{position:fixed;right:16px;bottom:16px;z-index:50;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.28);}
-    .floating-cta span{font-size:1.2rem;margin-left:6px;}
+    .floating-whatsapp{position:fixed;right:16px;bottom:16px;background:#25D366;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:1000;}
+    .floating-whatsapp img{width:24px;height:24px;}
   </style>
 </head>
 <body>
-  <!-- HERO -->
+  <!-- Hero -->
   <header class="hero">
     <div class="hero-content">
       <h1>Pedro Sandoval<br/>Fibra de Vidrio</h1>
@@ -51,7 +63,7 @@
     </div>
   </header>
 
-  <!-- SERVICIOS -->
+  <!-- Servicios -->
   <section id="servicios">
     <div class="container">
       <h2>Servicios</h2>
@@ -75,12 +87,11 @@
     </div>
   </section>
 
-  <!-- ANTES / DESPUÉS -->
-  <section id="antes-despues" style="background:#f7f7f7;">
+  <!-- Antes / Después -->
+  <section id="antes-despues" style="background:#f9f9f9;">
     <div class="container">
       <h2>Antes / Después</h2>
-      <p style="margin: .6rem 0 2rem; max-width:700px;">Mira cómo transformamos esta piscina con nuestro revestimiento en fibra de vidrio.</p>
-      <div class="grid" style="gap:1rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+      <div class="grid" style="margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;">
         <div class="before-after">
           <img src="img/piscina_before.jpg" alt="Antes piscina" />
           <span class="label">ANTES</span>
@@ -93,32 +104,28 @@
     </div>
   </section>
 
-  <!-- CTA FINAL -->
+  <!-- Contacto -->
   <section id="contacto">
     <div class="container" style="text-align:center;">
       <h2>¿Quieres tu cotización?</h2>
-      <p style="margin:1rem auto 2rem;max-width:650px;">Envíanos fotos o medidas y te respondemos rápido. Trabajamos en <strong>Santiago y alrededores</strong> (ajusta tu zona).
-      </p>
+      <p style="margin:1rem auto 2rem;max-width:600px;">Envíanos fotos o medidas y respondemos rápido. Servicio disponible en <strong>Santiago y alrededores</strong>.</p>
       <a class="btn" href="https://wa.me/569XXXXXXXX" target="_blank">Hablar por WhatsApp</a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;">
-      <div>
-        © <span id="year"></span> Pedro Sandoval Fibra de Vidrio<br/>
-        Tel: +56 9 XXXXX XXX · Correo: contacto@tudominio.cl
-      </div>
-      <div>
-        <a href="#servicios">Servicios</a> · <a href="#antes-despues">Antes/Después</a> · <a href="#contacto">Contacto</a>
-      </div>
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;">
+      <div>© <span id="year"></span> Pedro Sandoval Fibra de Vidrio<br/>Tel: +56 9 XXXXX XXX · contacto@tudominio.cl</div>
+      <div><a href="#servicios">Servicios</a> · <a href="#antes-despues">Antes/Después</a> · <a href="#contacto">Contacto</a></div>
     </div>
   </footer>
 
-  <a class="floating-cta" href="https://wa.me/569XXXXXXXX" target="_blank">WhatsApp <span>→</span></a>
+  <!-- Floating WhatsApp -->
+  <a class="floating-whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"/>
+  </a>
 
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
