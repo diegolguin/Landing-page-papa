@@ -99,7 +99,8 @@
   }
   .grid-3{
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  }
+ 
+}
   .card{
     background:var(--blanco);
     border:1px solid #e6e6e6;
@@ -185,4 +186,13 @@
     background: #094a75;            /* azul más oscuro al pasar */
     color: #f0f0f0;
   }
-  
+  /* Fuerza altura fija a las imágenes de las tarjetas */
+.card img {
+  height: 220px;        /* misma altura para todas */
+  object-fit: cover;    /* recorta pero mantiene proporción */
+}
+
+/* Aseguramos que cada tarjeta alinee su contenido arriba */
+.grid-3 {
+  align-items: start;   /* ya lo tenías, pero por si acaso */
+}
