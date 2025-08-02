@@ -188,8 +188,12 @@
   }
   /* Fuerza altura fija a las imágenes de las tarjetas */
 .card img {
-  height: 220px;        /* misma altura para todas */
+  width: 100%;
+  height: 240px;        /* misma altura para todas */
   object-fit: cover;    /* recorta pero mantiene proporción */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
 }
 
 /* Aseguramos que cada tarjeta alinee su contenido arriba */
